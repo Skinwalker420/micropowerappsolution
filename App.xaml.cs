@@ -1,5 +1,6 @@
 ﻿using System.Configuration;
 using System.Data;
+using System.Drawing.Printing;
 using System.Windows;
 
 namespace micropowerappsolution;
@@ -9,5 +10,6 @@ namespace micropowerappsolution;
 /// </summary>
 public partial class App : Application
 {
+
 }
 

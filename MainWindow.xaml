@@ -6,5 +6,5 @@
         xmlns:local="clr-namespace:micropowerappsolution"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-        <Button Name ="button">Click me!</Button>
+        <Button Name ="button" Click="button_Click">Click me!</Button>
 </Window>
