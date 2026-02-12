@@ -24,9 +24,19 @@ public partial class MainWindow : Window
 
     void button_Click(object sender, RoutedEventArgs e)
     {
-        uint condition;
-        TPCANStatus value = PCANBasic.GetValue(PCANBasic.PCAN_USBBUS1, TPCANParameter.PCAN_CHANNEL_CONDITION, out condition, sizeof(uint));
-        MessageBox.Show("" + condition);
-         
+        StringBuilder condition = new StringBuilder(PCANBasic.MAX_LENGTH_HARDWARE_NAME);
+        uint activate;
+        MessageBoxResult result;
+        TPCANStatus value = PCANBasic.GetValue(PCANBasic.PCAN_USBBUS1, TPCANParameter.PCAN_HARDWARE_NAME, condition, PCANBasic.MAX_LENGTH_HARDWARE_NAME);
+        result = MessageBox.Show("" + condition, "blink",MessageBoxButton.YesNo);
+        if(result == MessageBoxResult.Yes)
+        {
+            activate = PCANBasic.PCAN_PARAMETER_ON;
+        }
+        else
+        {
+            activate = PCANBasic.PCAN_PARAMETER_OFF;
+        }
+        PCANBasic.SetValue(PCANBasic.PCAN_USBBUS1, TPCANParameter.PCAN_CHANNEL_IDENTIFYING, ref activate, sizeof(uint));
     }
 }
