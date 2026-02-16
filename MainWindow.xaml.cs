@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Security.Policy;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -18,7 +19,7 @@ namespace micropowerappsolution;
 public partial class MainWindow : Window
 {
     bool player1Turn = false;
-    string[,] grid = { {"", "", ""}, { "", "", "" }, { "", "", "" } };
+    int[,] grid = { {0, 0, 0}, { 0, 0, 0}, { 0, 0, 0} };
     public MainWindow()
     {
         InitializeComponent();
@@ -86,16 +87,21 @@ public partial class MainWindow : Window
 
     void Game_Input(Button inputbutton, Vector position)
     {
-        if(inputbutton.Content != null) { return; }
+        WinCondition(0);
+        if (inputbutton.Content != null) { return; }
         player1Turn = !player1Turn;
         if (player1Turn) { 
             inputbutton.Content = "X";
-            grid[position.x, position.y] = "X";
+            grid[position.x, position.y] = 1;
 
             return; 
         }
         inputbutton.Content = "O";
-        grid[position.x, position.y] = "O";
+        grid[position.x, position.y] = 2;
+    }
+    void WinCondition(int player)
+    {
+        
     }
 }
 public class Vector
