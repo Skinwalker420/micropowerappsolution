@@ -19,3 +19,28 @@ C:\Users\vinjar_mem\OneDrive - Micropower Invest AB\Documents\GitHub\micropowera
 C:\Users\vinjar_mem\OneDrive - Micropower Invest AB\Documents\GitHub\micropowerappsolution\obj\Debug\net10.0-windows\micropowerappsolution.pdb
 C:\Users\vinjar_mem\OneDrive - Micropower Invest AB\Documents\GitHub\micropowerappsolution\obj\Debug\net10.0-windows\micropowerappsolution.genruntimeconfig.cache
 C:\Users\vinjar_mem\OneDrive - Micropower Invest AB\Documents\GitHub\micropowerappsolution\obj\Debug\net10.0-windows\ref\micropowerappsolution.dll
+C:\Users\henced_mem\Projects\micropowerappsolution\bin\Debug\net10.0-windows\micropowerappsolution.exe
+C:\Users\henced_mem\Projects\micropowerappsolution\bin\Debug\net10.0-windows\micropowerappsolution.deps.json
+C:\Users\henced_mem\Projects\micropowerappsolution\bin\Debug\net10.0-windows\micropowerappsolution.runtimeconfig.json
+C:\Users\henced_mem\Projects\micropowerappsolution\bin\Debug\net10.0-windows\micropowerappsolution.dll
+C:\Users\henced_mem\Projects\micropowerappsolution\bin\Debug\net10.0-windows\micropowerappsolution.pdb
+C:\Users\henced_mem\Projects\micropowerappsolution\obj\Debug\net10.0-windows\MainWindow.g.cs
+C:\Users\henced_mem\Projects\micropowerappsolution\obj\Debug\net10.0-windows\App.g.cs
+C:\Users\henced_mem\Projects\micropowerappsolution\obj\Debug\net10.0-windows\micropowerappsolution_MarkupCompile.cache
+C:\Users\henced_mem\Projects\micropowerappsolution\obj\Debug\net10.0-windows\micropowerappsolution_MarkupCompile.lref
+C:\Users\henced_mem\Projects\micropowerappsolution\obj\Debug\net10.0-windows\MainWindow.baml
+C:\Users\henced_mem\Projects\micropowerappsolution\obj\Debug\net10.0-windows\micropowerappsolution.g.resources
+C:\Users\henced_mem\Projects\micropowerappsolution\obj\Debug\net10.0-windows\micropowerappsolution.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\henced_mem\Projects\micropowerappsolution\obj\Debug\net10.0-windows\micropowerappsolution.AssemblyInfoInputs.cache
+C:\Users\henced_mem\Projects\micropowerappsolution\obj\Debug\net10.0-windows\micropowerappsolution.AssemblyInfo.cs
+C:\Users\henced_mem\Projects\micropowerappsolution\obj\Debug\net10.0-windows\micropowerappsolution.csproj.CoreCompileInputs.cache
+C:\Users\henced_mem\Projects\micropowerappsolution\obj\Debug\net10.0-windows\micropowerappsolution.sourcelink.json
+C:\Users\henced_mem\Projects\micropowerappsolution\obj\Debug\net10.0-windows\micropowerappsolution.dll
+C:\Users\henced_mem\Projects\micropowerappsolution\obj\Debug\net10.0-windows\refint\micropowerappsolution.dll
+C:\Users\henced_mem\Projects\micropowerappsolution\obj\Debug\net10.0-windows\micropowerappsolution.pdb
+C:\Users\henced_mem\Projects\micropowerappsolution\obj\Debug\net10.0-windows\micropowerappsolution.genruntimeconfig.cache
+C:\Users\henced_mem\Projects\micropowerappsolution\obj\Debug\net10.0-windows\ref\micropowerappsolution.dll
+C:\Users\henced_mem\Projects\micropowerappsolution\bin\Debug\net10.0-windows\PCANBasic.NET.dll
+C:\Users\henced_mem\Projects\micropowerappsolution\obj\Debug\net10.0-windows\micropowerappsolution.csproj.AssemblyReference.cache
+C:\Users\henced_mem\Projects\micropowerappsolution\obj\Debug\net10.0-windows\micropow.9571A863.Up2Date
+C:\Users\henced_mem\Projects\micropowerappsolution\bin\Debug\net10.0-windows\Include\PCAN-UDS_2013.cs

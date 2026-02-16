@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "OHCQyLItAJ8=",
+  "dgSpecHash": "ljVTfXykqjU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\vinjar_mem\\OneDrive - Micropower Invest AB\\Documents\\GitHub\\micropowerappsolution\\micropowerappsolution.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\henced_mem\\Projects\\micropowerappsolution\\micropowerappsolution.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\henced_mem\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\henced_mem\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
+    "C:\\Users\\henced_mem\\.nuget\\packages\\peak.pcanbasic.net\\4.10.1.968\\peak.pcanbasic.net.4.10.1.968.nupkg.sha512"
+  ],
   "logs": []
 }

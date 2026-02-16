@@ -1,31 +1,113 @@
 {
   "version": 3,
   "targets": {
-    "net10.0-windows7.0": {}
+    "net10.0-windows7.0": {
+      "Microsoft.NETCore.Platforms/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "NETStandard.Library/1.6.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Peak.PCANBasic.NET/4.10.1.968": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/PCANBasic.NET.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/PCANBasic.NET.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "type": "package",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.0/_._",
+        "microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+        "microsoft.netcore.platforms.nuspec",
+        "runtime.json"
+      ]
+    },
+    "NETStandard.Library/1.6.1": {
+      "sha512": "WcSp3+vP+yHNgS8EV5J7pZ9IRpeDuARBPN28by8zqff1wJQXm26PVU8L3/fYLBJVU7BtDyqNVWq2KlCVvSSR4A==",
+      "type": "package",
+      "path": "netstandard.library/1.6.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "netstandard.library.1.6.1.nupkg.sha512",
+        "netstandard.library.nuspec"
+      ]
+    },
+    "Peak.PCANBasic.NET/4.10.1.968": {
+      "sha512": "sUxW8dhaIB+x7XFcpepad1DaD1N5a9l6qB2cyOgDCv7M+SmF87hOIK/EsT42Th92exA02PfCr6+ilnZ0XYeyrg==",
+      "type": "package",
+      "path": "peak.pcanbasic.net/4.10.1.968",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "docs/EULA_en.md",
+        "docs/PCANBasic.NET_en.chm",
+        "docs/readme.md",
+        "images/Peak.png",
+        "lib/netstandard2.0/PCANBasic.NET.dll",
+        "lib/netstandard2.0/PCANBasic.NET.xml",
+        "peak.pcanbasic.net.4.10.1.968.nupkg.sha512",
+        "peak.pcanbasic.net.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0-windows7.0": []
+    "net10.0-windows7.0": [
+      "Peak.PCANBasic.NET >= 4.10.1.968"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\vinjar_mem\\.nuget\\packages\\": {}
+    "C:\\Users\\henced_mem\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vinjar_mem\\OneDrive - Micropower Invest AB\\Documents\\GitHub\\micropowerappsolution\\micropowerappsolution.csproj",
+      "projectUniqueName": "C:\\Users\\henced_mem\\Projects\\micropowerappsolution\\micropowerappsolution.csproj",
       "projectName": "micropowerappsolution",
-      "projectPath": "C:\\Users\\vinjar_mem\\OneDrive - Micropower Invest AB\\Documents\\GitHub\\micropowerappsolution\\micropowerappsolution.csproj",
-      "packagesPath": "C:\\Users\\vinjar_mem\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vinjar_mem\\OneDrive - Micropower Invest AB\\Documents\\GitHub\\micropowerappsolution\\obj\\",
+      "projectPath": "C:\\Users\\henced_mem\\Projects\\micropowerappsolution\\micropowerappsolution.csproj",
+      "packagesPath": "C:\\Users\\henced_mem\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\henced_mem\\Projects\\micropowerappsolution\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\vinjar_mem\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\henced_mem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net10.0-windows"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -49,6 +131,12 @@
     "frameworks": {
       "net10.0-windows7.0": {
         "targetAlias": "net10.0-windows",
+        "dependencies": {
+          "Peak.PCANBasic.NET": {
+            "target": "Package",
+            "version": "[4.10.1.968, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
