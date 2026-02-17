@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("micropowerappsolution")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5406447889bdd7d3211a6eea17b2f0b22f81bb6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+46dc00f959bbcdef00ee222994fc24f6c31b04dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("micropowerappsolution")]
 [assembly: System.Reflection.AssemblyTitleAttribute("micropowerappsolution")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

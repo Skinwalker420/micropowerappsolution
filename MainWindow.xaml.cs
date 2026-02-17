@@ -12,20 +12,21 @@ using System.Windows.Shapes;
 using Peak.Can.Basic;
 using Peak.Can.Uds;
 using Peak.Can.IsoTp;
+using System.ComponentModel;
 
 namespace micropowerappsolution;
 
 /// <summary>
 /// Interaction logic for MainWindow.xaml
 /// </summary>
-public partial class MainWindow : Window
+public partial class MainWindow : Window, INotifyPropertyChanged
 {
     public MainWindow()
     {
+        DataContext = this;
         Debug.WriteLine("Start");
 
         PcanChannel channel = PcanChannel.Usb01;
-        string path = System.IO.Path.GetTempPath();
 
         PcanStatus status = Api.GetValue(channel, PcanParameter.ChannelCondition, out uint condition); 
         Debug.WriteLine(condition);
@@ -69,8 +70,23 @@ public partial class MainWindow : Window
         Application.Current.Shutdown();
     }
 
-    void read_pcan()
+    private string boundText;
+
+    public event PropertyChangedEventHandler? PropertyChanged;
+
+    public string BoundText
     {
-        
+        get { return boundText; }
+        set 
+        { 
+            boundText = value;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BoundText"));
+        }
+    }
+
+    public void btnSet_Click(object sender, RoutedEventArgs e)
+    {
+        Debug.WriteLine("Clicked");
+        BoundText = "Set from code";
     }
 }

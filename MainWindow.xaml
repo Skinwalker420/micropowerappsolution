@@ -5,8 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:micropowerappsolution"
         mc:Ignorable="d"
-        Title="MainWindow" Height="180" Width="260">
+        Title="MainWindow" Height="350" Width="500">
 
-    <Button Click="button_click2">Detect</Button>
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontWeight" Value="Normal" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Name="Border" CornerRadius="10"  BorderThickness="1" BorderBrush="Black" Background="#d3d3d3">
+                                <ContentPresenter Margin="0"  HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="Border" Property="Background">
+                                        <Setter.Value>
+                                            <SolidColorBrush>#C6C6C6</SolidColorBrush>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="Border" Property="Background">
+                                        <Setter.Value>
+                                            <SolidColorBrush>#C6C6C6</SolidColorBrush>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Setter Property="Foreground" Value="#505050" />
+                                    <Setter TargetName="Border" Property="BorderBrush">
+                                        <Setter.Value>
+                                            <SolidColorBrush>#505050</SolidColorBrush>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
 
+        <TextBox Name="txtInput" Width="250" Height="40" FontSize="16" Text="{Binding BoundText, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}" Margin="100,41,100,203" />
+        <Button Name="btnSet" Content="Set" Click="btnSet_Click" Width="100" Height="40" />
+        <TextBlock Name="tbResult" FontSize="16" Text="{Binding BoundText}" Margin="55,181,55,21" />
+
+    </Grid>
 </Window>
