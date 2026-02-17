@@ -9,6 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="img\Baron.png" />
+    <None Remove="img\Canio.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\Baron.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\Canio.png" />
     <Resource Include="img\Joker.png" />
   </ItemGroup>
 
