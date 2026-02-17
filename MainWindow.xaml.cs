@@ -1,4 +1,5 @@
-﻿using System.Security.Policy;
+﻿using System.Diagnostics;
+using System.Security.Policy;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,66 +24,7 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-    }
-    void button_Click0(object sender, RoutedEventArgs e)
-    {
-        /*StringBuilder condition = new StringBuilder(PCANBasic.MAX_LENGTH_HARDWARE_NAME);
-        uint activate;
-        MessageBoxResult result;
-        TPCANStatus value = PCANBasic.GetValue(PCANBasic.PCAN_USBBUS1, TPCANParameter.PCAN_HARDWARE_NAME, condition, PCANBasic.MAX_LENGTH_HARDWARE_NAME);
-        result = MessageBox.Show("" + condition, "blink",MessageBoxButton.YesNo);
-        if(result == MessageBoxResult.Yes)
-        {
-            activate = PCANBasic.PCAN_PARAMETER_ON;
-        }
-        else
-        {
-            activate = PCANBasic.PCAN_PARAMETER_OFF;
-        }
-        PCANBasic.SetValue(PCANBasic.PCAN_USBBUS1, TPCANParameter.PCAN_CHANNEL_IDENTIFYING, ref activate, sizeof(uint)); */
-        Vector pos = new Vector(0, 0);
-        Game_Input(button, pos);
-
-    }
-    void button_Click1(object sender, RoutedEventArgs e)
-    {
-        Vector pos = new Vector(0, 1);
-        Game_Input(button1, pos);
-    }
-    void button_Click2(object sender, RoutedEventArgs e)
-    {
-        Vector pos = new Vector(0, 2);
-        Game_Input(button2, pos);
-    }
-    void button_Click3(object sender, RoutedEventArgs e)
-    {
-        Vector pos = new Vector(1, 0);
-        Game_Input(button3, pos);
-    }
-    void button_Click4(object sender, RoutedEventArgs e)
-    {
-        Vector pos = new Vector(1, 1);
-        Game_Input(button4, pos);
-    }
-    void button_Click5(object sender, RoutedEventArgs e)
-    {
-        Vector pos = new Vector(1, 2);
-        Game_Input(button5, pos);
-    }
-    void button_Click6(object sender, RoutedEventArgs e)
-    {
-        Vector pos = new Vector(2, 0);
-        Game_Input(button6, pos);
-    }
-    void button_Click7(object sender, RoutedEventArgs e)
-    {
-        Vector pos = new Vector(2, 1);
-        Game_Input(button7, pos);
-    }
-    void button_Click8(object sender, RoutedEventArgs e)
-    {
-        Vector pos = new Vector(2, 2);
-        Game_Input(button8, pos);
+        
     }
 
     void Game_Input(Button inputbutton, Vector position)
@@ -103,10 +45,36 @@ public partial class MainWindow : Window
     {
         
     }
+
+    private async void Button_Click(object sender, RoutedEventArgs e)
+    {
+        Binding ellipseBinding = new Binding("AngleName");
+        double speed = 1;
+        Random rnd = new Random();
+        btn.IsEnabled = false;
+        double value = rnd.Next(1, 360);
+        double realValue = value / 360;
+        value += 2160;
+        Debug.WriteLine(realValue);
+        for (double i = 1; i <= value; i += speed) {
+            Angle _angle = new Angle(i);
+            myGrid.DataContext = _angle;
+            speed = Math.Clamp(value/i - 1, 0.1, 1);
+            await Task.Delay(1);
+        }
+        btn.IsEnabled = true;
+        
+        //MessageBox.Show("" + rnd.Next(0, 38));
+    }
 }
 public class Vector
 {
     public int x, y;
 
     public Vector(int X, int Y) { x = X; y = Y; }
+}
+public class Angle
+{
+    public double thisAngle { get; set; }
+    public Angle(double x) { this.thisAngle = x; }
 }
