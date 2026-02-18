@@ -11,6 +11,13 @@
   <ItemGroup>
     <None Remove="img\Baron.png" />
     <None Remove="img\Canio.png" />
+    <None Remove="img\roulette.png" />
+    <None Remove="img\X.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\roulette.png" />
+    <Resource Include="img\X.jpg" />
   </ItemGroup>
 
   <ItemGroup>

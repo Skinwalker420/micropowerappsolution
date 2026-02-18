@@ -48,23 +48,28 @@ public partial class MainWindow : Window
 
     private async void Button_Click(object sender, RoutedEventArgs e)
     {
-        Binding ellipseBinding = new Binding("AngleName");
+        Binding wheelBinding = new Binding("AngleName");
         double speed = 1;
         Random rnd = new Random();
         btn.IsEnabled = false;
-        double value = rnd.Next(1, 360);
-        double realValue = value / 360;
-        value += 2160;
-        Debug.WriteLine(realValue);
-        for (double i = 1; i <= value; i += speed) {
-            Angle _angle = new Angle(i);
+        double realValue = 360/38 * 0;
+        double value = Math.Floor(realValue/360 * 38); //rnd.Next(0, 360);
+        realValue += 0;
+        Debug.WriteLine(value);
+        for (double i = 1; i <= realValue; i += speed) {
+            Angle _angle = new Angle(-i);
             myGrid.DataContext = _angle;
-            speed = Math.Clamp(value/i - 1, 0.1, 1);
+            speed = Math.Clamp(realValue/i - 1, 0.0075, 1.5);
             await Task.Delay(1);
         }
         btn.IsEnabled = true;
-        
-        //MessageBox.Show("" + rnd.Next(0, 38));
+
+        if (value == 0 || value == 19)
+        {
+            MessageBox.Show("Green");
+        }
+        else if (value % 2 == 0) { MessageBox.Show("Black"); }
+        else { MessageBox.Show("Red"); }
     }
 }
 public class Vector
