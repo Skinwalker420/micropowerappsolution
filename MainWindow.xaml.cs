@@ -13,6 +13,7 @@ using Peak.Can.Basic;
 using Peak.Can.Uds;
 using Peak.Can.IsoTp;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace micropowerappsolution;
 
@@ -28,7 +29,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
         PcanChannel channel = PcanChannel.Usb01;
 
-        PcanStatus status = Api.GetValue(channel, PcanParameter.ChannelCondition, out uint condition); 
+        PcanStatus status = Api.GetValue(channel, PcanParameter.ChannelIdentifying, out uint condition); 
         Debug.WriteLine(condition);
         if(condition == 0)
         {
@@ -41,6 +42,8 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
             UDSApi.Initialize_2013(handle, baudrate);
         }
+
+        
     }
 
     void button_Click(object sender, RoutedEventArgs e)
@@ -70,23 +73,34 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         Application.Current.Shutdown();
     }
 
-    private string boundText;
-
     public event PropertyChangedEventHandler? PropertyChanged;
+
+    private string boundText;
 
     public string BoundText
     {
+
         get { return boundText; }
         set 
         { 
             boundText = value;
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BoundText"));
+            OnPropertyChanged();
         }
     }
 
-    public void btnSet_Click(object sender, RoutedEventArgs e)
+    public void writeButton_Click(object sender, RoutedEventArgs e)
     {
-        Debug.WriteLine("Clicked");
-        BoundText = "Set from code";
+        Debug.WriteLine(boundText);
+    }
+
+    public void readButton_Click(object sender, RoutedEventArgs e)
+    {
+        Random rand = new Random();
+        BoundText = rand.Next(0, 100).ToString();
+    }
+
+    private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }

@@ -44,3 +44,5 @@ C:\Users\henced_mem\Projects\micropowerappsolution\bin\Debug\net10.0-windows\PCA
 C:\Users\henced_mem\Projects\micropowerappsolution\obj\Debug\net10.0-windows\micropowerappsolution.csproj.AssemblyReference.cache
 C:\Users\henced_mem\Projects\micropowerappsolution\obj\Debug\net10.0-windows\micropow.9571A863.Up2Date
 C:\Users\henced_mem\Projects\micropowerappsolution\bin\Debug\net10.0-windows\Include\PCAN-UDS_2013.cs
+C:\Users\henced_mem\Projects\micropowerappsolution\obj\Debug\net10.0-windows\GridWindow.g.cs
+C:\Users\henced_mem\Projects\micropowerappsolution\obj\Debug\net10.0-windows\GridWindow.baml

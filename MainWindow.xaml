@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="500">
 
-    <Grid>
+    <Grid Name="myGrid">
         <Grid.Resources>
             <Style TargetType="{x:Type Button}">
                 <Setter Property="FontSize" Value="18" />
@@ -46,9 +46,10 @@
             </Style>
         </Grid.Resources>
 
-        <TextBox Name="txtInput" Width="250" Height="40" FontSize="16" Text="{Binding BoundText, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}" Margin="100,41,100,203" />
-        <Button Name="btnSet" Content="Set" Click="btnSet_Click" Width="100" Height="40" />
-        <TextBlock Name="tbResult" FontSize="16" Text="{Binding BoundText}" Margin="55,181,55,21" />
+        <TextBox Name="txtInput" Width="250" Height="40" FontSize="16" Text="{Binding BoundText, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="100,41,100,203" />
+        <Button Name="btnRead" Content="Read" Click="readButton_Click" Width="100" Height="40" Margin="125,127,275,167" />
+        <Button Name="btnWrite" Content="Write" Click="writeButton_Click" Width="100" Height="40" Margin="275,127,125,167" />
+        <TextBlock Name="tbResult" FontSize="16" Text="Temporary" Margin="55,181,55,21" />
 
     </Grid>
 </Window>
